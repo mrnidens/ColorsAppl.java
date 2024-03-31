@@ -9,10 +9,4 @@ public class ResponseDto {
     private ResultDto result;
     private StatusDto status;
 
-    @Override
-    public String toString() {
-        return "ResponseDto{" +
-                "result=" + result +
-                '}';
-    }
 }

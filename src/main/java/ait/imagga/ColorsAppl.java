@@ -37,25 +37,20 @@ public class ColorsAppl {
             if (resultDto != null) {
                 ColorsDto colorsDto = resultDto.getColors();
                 if (colorsDto != null) {
-                    printColors("Background Colors", colorsDto.getBackgroundColors());
-                    printColors("Foreground Colors", colorsDto.getForegroundColors());
-                    printColors("Image Colors", colorsDto.getImageColors());
+                    List<ColorDto> imageColors = resultDto.getColors().getImageColors();
+                    if (imageColors != null && !imageColors.isEmpty()) {
+                        System.out.println("Image Colors:");
+                        for (ColorDto color : imageColors) {
+                            System.out.println("Color Name: " + color.getClosestPaletteColor());
+                            System.out.println("Parent Color Name: " + color.getClosestPaletteColorParent());
+                            System.out.println("Coverage Percent: " + color.getPercent());
+                            System.out.println();
+                        }
+                    } else {
+                        System.out.println("No image colors found.");
+                    }
                 }
             }
-        }
-    }
-
-    private static void printColors(String category, List<ColorDto> colors) {
-        if (colors != null && !colors.isEmpty()) {
-            System.out.println(category + ":");
-            for (ColorDto color : colors) {
-                System.out.println("  Color Name: " + color.getClosestPaletteColor());
-                System.out.println("  Parent Color Name: " + color.getClosestPaletteColorParent());
-                System.out.println("  Coverage Percent: " + color.getPercent());
-                System.out.println(); // Для отделения информации о цветах
-            }
-        } else {
-            System.out.println(category + ": No colors found.");
         }
     }
 }
