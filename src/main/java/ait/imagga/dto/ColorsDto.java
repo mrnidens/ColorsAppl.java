@@ -10,10 +10,10 @@ import java.util.List;
 @Setter
 @ToString
 public class ColorsDto {
-    private List<ColorDto> backgroundColors;
-    private double colorPercentThreshold;
-    private int colorVariance;
-    private List<ColorDto> foregroundColors;
-    private List<ColorDto> imageColors;
-    private double objectPercentage;
+    private List<ColorDto> background_colors;
+    private double color_percent_threshold;
+    private int color_variance;
+    private List<ColorDto> foreground_colors;
+    private List<ColorDto> image_colors;
+    private double object_percentage;
 }

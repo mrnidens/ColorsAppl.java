@@ -9,12 +9,12 @@ import lombok.ToString;
 @ToString
 public class ColorDto {
     private int b;
-    private String closestPaletteColor;
-    private String closestPaletteColorHtmlCode;
-    private String closestPaletteColorParent;
-    private double closestPaletteDistance;
+    private String closest_palette_color;
+    private String closest_palette_color_html_code;
+    private String closest_palette_color_parent;
+    private double closest_palette_distance;
     private int g;
-    private String htmlCode;
+    private String html_code;
     private double percent;
     private int r;
 }

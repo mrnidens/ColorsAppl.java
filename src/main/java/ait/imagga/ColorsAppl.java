@@ -37,12 +37,12 @@ public class ColorsAppl {
             if (resultDto != null) {
                 ColorsDto colorsDto = resultDto.getColors();
                 if (colorsDto != null) {
-                    List<ColorDto> imageColors = resultDto.getColors().getImageColors();
+                    List<ColorDto> imageColors = resultDto.getColors().getImage_colors();
                     if (imageColors != null && !imageColors.isEmpty()) {
                         System.out.println("Image Colors:");
                         for (ColorDto color : imageColors) {
-                            System.out.println("Color Name: " + color.getClosestPaletteColor());
-                            System.out.println("Parent Color Name: " + color.getClosestPaletteColorParent());
+                            System.out.println("Color Name: " + color.getClosest_palette_color());
+                            System.out.println("Parent Color Name: " + color.getClosest_palette_color_parent());
                             System.out.println("Coverage Percent: " + color.getPercent());
                             System.out.println();
                         }
